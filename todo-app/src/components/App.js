@@ -11,6 +11,7 @@ class App extends React.Component {
       movies: [],
       posts: [] // to be deleted
     }
+    // this.filterItem = this.filterItem.bind(this);
   }
 
   componentDidMount() {
@@ -22,12 +23,24 @@ class App extends React.Component {
       // console.log(this.state.posts)
     })
   }
+/*
+  filterItem(input) {
+    let results = this.state.posts;
+    let filteredResults = results.filter((post) => post.title.includes(input));
+    this.setState({ posts: filteredResults });
+  }*/
+
+   filterItem = (input) => {
+    let results = this.state.posts;
+    let filteredResults = results.filter((post) => post.title.includes(input));
+    this.setState({ posts: filteredResults });
+  }
 
   render() {
     return (
       <div className = "App">
         <Navigation search = {Navigation} />
-        <Search search={() => {} /* need to implement search function */} />
+        <Search search={this.filterItem} />
         <p className="App-intro">Top Ranked Movies</p>
         <ul>
         {this.state.posts.map(post => (

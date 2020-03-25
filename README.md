@@ -1,4 +1,5 @@
 # React-TODO-App
+First meeting:
 1. npm
 2. why use brackets after return in render()?
 3. list out features
@@ -8,3 +9,7 @@
 7. https://developers.themoviedb.org/3/genres/get-movie-list
 8. How to filter using navigation bar, React
 9. How to filter using search bar
+
+Second meeting:
+1. Understand "this" in different context and why use arrow functions
+2. What did you learn? What difficulties did you meet?
